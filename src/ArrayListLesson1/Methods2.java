@@ -30,7 +30,14 @@ public class Methods2 {
         Student name2 = new Student("Masha");
 
         int index2 = students.indexOf(name1);
+        int index3 = students.lastIndexOf(name1);
         System.out.println(index2);
+        System.out.println(index3);
+
+        System.out.println(students.isEmpty());
+        System.out.println(students.contains(name1));
+
+
 
 
     }
