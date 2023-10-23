@@ -3,6 +3,7 @@ package ArrayListLesson1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Iterator;
 
 public class Methods3 {
     public static void main(String[] args) {
@@ -62,8 +63,14 @@ public class Methods3 {
 //      нельзя изменять этот list
         List<Integer> list5 = List.of(3, 4, 5, 6, 7);
         System.out.println(list5);
+        System.out.println("***********");
 
-
+        Iterator<Integer> iterator = list2.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+            iterator.remove();
+        }
+        System.out.println(list2);
 
 
     }
