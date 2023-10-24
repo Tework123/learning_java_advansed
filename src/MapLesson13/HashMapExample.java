@@ -10,6 +10,8 @@ public class HashMapExample {
         map1.put(11133, "den");
         map1.put(1112, "den");
         map1.put(331, "sacha");
+        int x = 999_999_999;
+        int x2 = 2147_483_647;
 
         map1.putIfAbsent(111, "den");
         System.out.println(map1.get(11123));
@@ -23,6 +25,9 @@ public class HashMapExample {
 
         System.out.println(map1);
         System.out.println(map1.get(331));
+        Map<Integer, String> map2 = new HashMap<>(16,0.75f);
+
+
 
 
     }

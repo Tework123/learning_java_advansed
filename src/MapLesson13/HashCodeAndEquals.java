@@ -16,6 +16,8 @@ public class HashCodeAndEquals {
         mapStudents.put(st2, 3.5);
         mapStudents.put(st3, 3.8);
         System.out.println(mapStudents);
+        System.out.println(mapStudents.containsKey(st1));
+
 
 //       надо переопределить hashCode и equals для самописных классов
 //      сначала сравнивается по equals, потом по hashCode
@@ -32,9 +34,9 @@ public class HashCodeAndEquals {
     }
 }
 
-class Student {
+class Student implements Comparable<Student> {
     String name;
-    int age;
+    final Integer age;
 
     public Student(String name, int age) {
         this.name = name;
@@ -60,5 +62,10 @@ class Student {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Student student) {
+        return this.age.compareTo(student.age);
     }
 }
