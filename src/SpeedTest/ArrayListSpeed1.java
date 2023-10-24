@@ -16,11 +16,6 @@ public class ArrayListSpeed1 {
         final long endTime0 = System.currentTimeMillis();
         System.out.println("array millis: " + (endTime0 - startTime0));
 
-        final long startTime0Insert = System.currentTimeMillis();
-        array[count / 2] = 1;
-        final long endTime0Insert = System.currentTimeMillis();
-        System.out.println("array millis: " + (endTime0Insert - startTime0Insert));
-
 
         System.out.println("****ArrayList()*****");
         ArrayList<Integer> arrayList1 = new ArrayList<>();
