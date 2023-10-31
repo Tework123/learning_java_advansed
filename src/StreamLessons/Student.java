@@ -1,11 +1,14 @@
 package StreamLessons;
 
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student> {
     String name;
     int age;
-    int course;
+    Integer course;
 
     public Student(String name, int age, int course) {
         this.name = name;
@@ -33,5 +36,10 @@ public class Student {
     @Override
     public int hashCode() {
         return Objects.hash(name, age, course);
+    }
+
+    @Override
+    public int compareTo(@NotNull Student student) {
+        return this.course.compareTo(student.course);
     }
 }
